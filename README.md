@@ -1,4 +1,4 @@
-# lewa
+# Stencil
 A simple way to combine data + templates with containers.
 
 To get more information on how to build the templates and run command, see the documentaion on Gomplate
