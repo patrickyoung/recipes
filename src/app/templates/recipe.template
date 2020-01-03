@@ -1,0 +1,11 @@
+{{ (ds "recipe").name }}
+
+Ingredients:
+{{ range $ingredient := (ds "recipe").ingredients -}}
+* {{ $ingredient }}
+{{ end }}
+
+Steps:
+{{ range $step := (ds "recipe").steps -}}
+* {{ $step }}
+{{ end }}

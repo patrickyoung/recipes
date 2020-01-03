@@ -1,0 +1,3 @@
+{{ range $recipe := (ds "recipes").recipes }}
+{{ $recipe.name }}
+{{ end }}
