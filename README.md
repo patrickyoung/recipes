@@ -10,3 +10,9 @@ A simple recipe database.
 
 # Use
 `make run`
+
+# Future
+
+- Step-by-step mode
+- Recipe Prep
+- Meal prep
