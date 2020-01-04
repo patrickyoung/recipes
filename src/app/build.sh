@@ -18,8 +18,9 @@ function create_recipe_page() {
 
 function build_index_page() {
     gomplate -d 'recipes=./data/index.yaml' \
-         -f ./templates/recipe_list.template \
-         -o "$DIST_DIR/index.html"
+             -d 'recipe=./recipes/?0.html' \
+             -f ./templates/recipe_list.template \
+             -o "$DIST_DIR/index.html"
 }
 
 # Build recipe pages
