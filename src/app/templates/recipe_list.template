@@ -1,3 +1,38 @@
-{{ range $recipe := (ds "recipes").recipes }}
-{{ $recipe.name }}
-{{ end }}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div class="uk-section uk-section-default">
+            <div class="uk-container uk-container-small">
+                <h1 class="uk-heading-divider">Recipes</h1>
+                <div class="uk-child-width-1-3@m uk-grid-small uk-grid-match" uk-grid>
+                    {{ range $recipe := (ds "recipes").recipes }}
+                    <div>
+                        <div class="uk-card uk-card-default uk-card-body">
+                            <h3 class="uk-card-title">
+                                <a href="/recipes/{{ $recipe.name }}.html">{{ $recipe.name }}</a>
+                            </h3>
+                            <p></p>
+                        </div>
+                    </div>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+    </body>
+    </body>
+</html>
+
+
+
+
+
+
+

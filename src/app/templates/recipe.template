@@ -1,11 +1,33 @@
-{{ (ds "recipe").name }}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Title</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/css/uikit.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.1.5/js/uikit-icons.min.js"></script>
+    </head>
+    <body>
+        <div class="uk-section uk-section-default">
+            <div class="uk-container uk-container-small">
+                <h1 class="uk-heading-divider">{{ (ds "recipe").name }}</h1>
 
-Ingredients:
-{{ range $ingredient := (ds "recipe").ingredients -}}
-* {{ $ingredient }}
-{{ end }}
+                <p class="uk-text-emphasis uk-text-uppercase">Ingredients:</p>
+                <ul class="uk-list uk-list-bullet">
+                    {{ range $ingredient := (ds "recipe").ingredients -}}
+                    <li>{{ $ingredient }}</li>
+                    {{ end }}
+                </ul>
 
-Steps:
-{{ range $step := (ds "recipe").steps -}}
-* {{ $step }}
-{{ end }}
+                <p class="uk-text-emphasis uk-text-uppercase">Steps:</p>
+                <ul class="uk-list uk-list-large uk-list-divider">
+                    {{ range $step := (ds "recipe").steps -}}
+                    <li>{{ $step }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+    </body>
+    </body>
+</html>
